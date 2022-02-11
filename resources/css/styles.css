@@ -10,76 +10,100 @@
 /*Header*/
 
 header{
-    /*background: linear-gradient(rgb(0 10 255 / 73%) 0%, rgba(0, 10, 255, 0) 65.87%);*/
     background-color: white;
-    /*padding: 20px 20px 50px 20px;*/
+    opacity: 0.96;
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: start;
+    align-items: start;
     padding: 9px 15px;
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     width: 100%;
+    overflow: hidden;
+
 }
 
-.headerFullHeight{
+#close-button{
+    width: 100%;
     height: 100vh;
-    overflow-y: hidden;
+    background-color: transparent;
+    position: absolute;
+    display: none;
+    cursor: url(../Assets/Close3.svg), auto;
 }
 
 /*Navigation*/
 
-nav {
-    position: static;
-    display: inline-block;
-  }
-
-.droplink {
+#menu-link {
     background-color: none;
     color: black;
     border: none;
     cursor: pointer;
-  }
+}
   
-  .droplink:hover, .droplink:focus {
+  #menu-link:hover, #menulink:focus {
     background-color: none;
   }
   
-  .dropdown-content {
+  #menu-top-area{
+      z-index: 1;
+  }
+
+  #menu-content {
     display: none;
-    position: absolute;
-    background-color: none;
-    min-width: 160px;
+    position: static;
     overflow: auto;
-    z-index: 1;
   }
   
-  .dropdown-content a {
+  #menu-content a {
     color: rgba(0,0,0,0.5);
     text-decoration: none;
     display: block;
     padding: 0.3px;
   }
   
-  .dropdown-content a:hover {
+  #menu-content a:hover {
     text-decoration: underline;
   }
-  
-  .show {
-      display: block;
-      position: static;
+
+
+#menu-link-2 {
+    display: none;
+    text-decoration: none;
+    color: black;
 }
 
-/*Banners*/
+  #menu-bottom-area{
+      display: none;
+      margin-bottom: 6px;
+      grid-column-start: 1;
+      align-self: end;
+      z-index: 1;
+  }
+
+  #menu-bottom-area a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+  }
+
+/*Homepage Banners*/
+
+.banner-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+}
 
 .banner1 {
     width: 100%;
     height: 100vh;
+    grid-column-start: 1;
+    grid-column-end: 2;
     display: flex;
     justify-content: center;
     background-color: black;
-    /*background-image: url("../images/Antibes/Antibes_00.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;*/
 }
 
 .headline{
@@ -92,10 +116,6 @@ nav {
     display: flex;
     justify-content: center;
     background-color: #fcfce0;
-    /*background-image: url("../images/Orchestra/Orchestra_00.jpg");
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;*/
 }
 .cosmos{
     width: 90%;
@@ -107,10 +127,6 @@ nav {
     display: flex;
     justify-content: center;
     background-color: black;
-    /*background-image: url("../images/Cosmos/Cosmos_00.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;*/
 }
 
 .antibes{
@@ -123,10 +139,6 @@ nav {
     display: flex;
     justify-content: center;
     background-color: #fcfce0;
-    /*background-image: url("../images/Cosmos/Cosmos_00.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;*/
 }
 
 .rosario{
@@ -139,10 +151,6 @@ nav {
     display: flex;
     justify-content: center;
     background-color: black;
-    /*background-image: url("../images/Cosmos/Cosmos_00.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;*/
 }
 
 .orchestra{
@@ -155,10 +163,6 @@ nav {
     display: flex;
     justify-content: center;
     background-color: #fcfce0;
-    /*background-image: url("../images/Cosmos/Cosmos_00.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;*/
 }
 
 .mikuski{
@@ -171,10 +175,6 @@ nav {
     display: flex;
     justify-content: center;
     background-color: black;
-    /*background-image: url("../images/Cosmos/Cosmos_00.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;*/
 }
 
 .piquenique{
@@ -187,10 +187,6 @@ nav {
     display: flex;
     justify-content: center;
     background-color: #fcfce0;
-    /*background-image: url("../images/Cosmos/Cosmos_00.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;*/
 }
 
 .antibes{
@@ -203,12 +199,7 @@ nav {
     display: flex;
     justify-content: center;
     background-color: black;
-    /*background-image: url("../images/Cosmos/Cosmos_00.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;*/
-}
-
+}   
 .structure{
     width: 93%;
 }
@@ -219,10 +210,6 @@ nav {
     display: flex;
     justify-content: center;
     background-color: #fcfce0;
-    /*background-image: url("../images/Cosmos/Cosmos_00.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;*/
 }
 
 .newmachine{
