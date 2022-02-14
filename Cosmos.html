@@ -7,13 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <title>15 Typography portfolio</title>
+    <title>Cosmos</title>
   </head>
 
   <body>
-    
-      <header>
+
+    <header>
       <div id="menu-top-area">
+        <div class="slider-title">Cosmos</div>
         <a id="menu-link">Gabriel Nazoa</a>
         <a id="menu-link-2" href="index.html">Gabriel Nazoa</a>
         <div id="menu-content">
@@ -40,52 +41,35 @@
       
       </header>
 
-    <section class="banner-container">
+    <div class="slideshow">
+      <img class="slide" src="resources/images/Cosmos/Cosmos 1.jpg">
+      <img class="slide" src="resources/images/Cosmos/Cosmos 2.jpg">
+      <img class="slide" src="resources/images/Cosmos/Cosmos 3.jpg">
+      <button class="button left" onclick="plusDivs(-1)"></button>
+      <button class="button right" onclick="plusDivs(+1)"></button>
+    </div>
+  </body>
 
-    <a class="banner1" href="Headline 1987.html">
-      <img class="headline" src="resources/Assets/Headline.svg">
-    </a>
-    
-    <a class="banner2" href="Cosmos.html">
-      <img class="cosmos" src="resources/Assets/Cosmos.svg">
-    </a>
+</html>
+<script>
 
-    <a class="banner3" href="ANR.html">
-      <img class="antibes" src="resources/Assets/Arial New Roman B.svg">
-    </a>
+var slideIndex = 1;
+showDivs(slideIndex);
 
-    <a class="banner4" href="Rosario.html">
-      <img class="rosario" src="resources/Assets/Rosario.svg">
-    </a>
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-    <a href="Orchestra.html" class="banner5">
-      <img class="orchestra" src="resources/Assets/Orchestra B.svg">
-    </a>
-    
-    <a href="Mikuski.html" class="banner6">
-      <img class="mikuski" src="resources/Assets/Mikuski.svg">
-    </a>
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length};
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
 
-    <a href="Pique Nique.html" class="banner7">
-      <img class="piquenique" src="resources/Assets/Piquenique.svg">
-    </a>
-
-    <a href="Antibes.html" class="banner8">
-      <img class="antibes" src="resources/Assets/Antibes.svg">
-    </a>
-
-    <a href="Structure.html" class="banner9">
-      <img class="structure" src="resources/Assets/Structure.svg">
-    </a>
-
-    <a href="New Machine Gothic.html" class="banner10">
-      <img class="newmachine" src="resources/Assets/New Machine B.svg">
-    </a>
-  </section>
-
-    <footer>
-      <a href="#" class="back_to_top">Back to top</a>
-    </footer>
-    </body>
-  </html>
+</script>
 <script type="text/javascript" src="resources/js/scripts.js"></script>
